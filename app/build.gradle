@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.0"
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+	// read in the API key to use for the SDK from an external file outside the project (to keep it local, and avoid having it stored in a repo)
+	File apikeyfile = new File("../apikey.gradle");
+	if (apikeyfile.exists()) {
+		apply from: apikeyfile.canonicalPath;
+		/**
+		 * apikey.gradle will look like:
+		 * ext{
+		 *     apikey = "YourApiKey="
+		 * }
+		 */
+	} else {
+		ext { apikey = "" }  // alternatively, fill in your API key here (but beware that it gets committed to the repo, then)
+	}
+
+	defaultConfig {
+		applicationId "com.hmrocket.jabrademo"
+		minSdkVersion 21
+		targetSdkVersion 26
+		versionCode 1
+		versionName "1.0"
+		manifestPlaceholders = [JABRA_APP_ID: apikey];   // To use the Jabra SDK, your app manifest must include an app id - please see the SDK documentation
+		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+	}
+}
+
+// Add this to extract .AAR files
+allprojects {
+	repositories {
+		jcenter()
+		flatDir {
+			dirs 'libs'
+		}
+	}
+}
+
+dependencies {
+	implementation fileTree(include: ['*.jar'], dir: 'libs')
+	// Add this dependency for the Jabra API
+	compile(name: 'JabraSdk-1_0_0-A1000099-N1_0_12_0-release', ext: 'aar')
+	//
+	compile 'com.android.support:design:27.0.0'
+	implementation 'com.android.support:appcompat-v7:27.0.0'
+	implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+	testImplementation 'junit:junit:4.12'
+	androidTestImplementation 'com.android.support.test:runner:1.0.1'
+	androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+	implementation files('libs/JabraSdk-1_0_0-A1000099-N1_0_12_0-sources.jar')
+}

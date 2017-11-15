@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="true"
+	android:orientation="vertical"
+	>
+
+	<android.support.v4.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TableLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:shrinkColumns="1">
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingEnd="@dimen/text_margin"
+				android:paddingStart="@dimen/text_margin"
+				android:paddingTop="@dimen/text_margin">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Device Name"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+				<TextView
+					android:id="@+id/name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/text_margin"
+					android:layout_marginStart="@dimen/text_margin"
+					android:paddingEnd="@dimen/text_margin"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+					tools:text="Test text"/>
+			</TableRow>
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingEnd="@dimen/text_margin"
+				android:paddingStart="@dimen/text_margin"
+				android:paddingTop="@dimen/text_margin">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Version"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+				<TextView
+					android:id="@+id/version"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/text_margin"
+					android:layout_marginStart="@dimen/text_margin"
+					android:paddingEnd="@dimen/text_margin"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+					tools:text="Test text"/>
+			</TableRow>
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingEnd="@dimen/text_margin"
+				android:paddingStart="@dimen/text_margin"
+				android:paddingTop="@dimen/text_margin">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Battery"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+				<TextView
+					android:id="@+id/battery"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/text_margin"
+					android:layout_marginStart="@dimen/text_margin"
+					android:paddingEnd="@dimen/text_margin"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+					tools:text="Test text"/>
+			</TableRow>
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingEnd="@dimen/text_margin"
+				android:paddingStart="@dimen/text_margin"
+				android:paddingTop="@dimen/text_margin">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/text_margin"
+					android:layout_marginStart="@dimen/text_margin"
+					android:paddingEnd="@dimen/text_margin"
+					android:text=""
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+			</TableRow>
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingEnd="@dimen/text_margin"
+				android:paddingStart="@dimen/text_margin"
+				android:paddingTop="@dimen/text_margin">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Heart rate"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+				<TextView
+					android:id="@+id/hr"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/text_margin"
+					android:layout_marginStart="@dimen/text_margin"
+					android:paddingEnd="@dimen/text_margin"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+					tools:text="Test text"/>
+			</TableRow>
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingEnd="@dimen/text_margin"
+				android:paddingStart="@dimen/text_margin"
+				android:paddingTop="@dimen/text_margin">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Step rate"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+				<TextView
+					android:id="@+id/steprate"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/text_margin"
+					android:layout_marginStart="@dimen/text_margin"
+					android:paddingEnd="@dimen/text_margin"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+					tools:text="Test text"/>
+			</TableRow>
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingEnd="@dimen/text_margin"
+				android:paddingStart="@dimen/text_margin"
+				android:paddingTop="@dimen/text_margin">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="RRI"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+				<TextView
+					android:id="@+id/rri"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/text_margin"
+					android:layout_marginStart="@dimen/text_margin"
+					android:paddingEnd="@dimen/text_margin"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+					tools:text="Test text"/>
+			</TableRow>
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingEnd="@dimen/text_margin"
+				android:paddingStart="@dimen/text_margin"
+				android:paddingTop="@dimen/text_margin">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text=""
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+				<TextView
+					android:id="@+id/status"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/text_margin"
+					android:layout_marginStart="@dimen/text_margin"
+					android:paddingEnd="@dimen/text_margin"
+					android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+					tools:text="Test text"/>
+			</TableRow>
+
+		</TableLayout>
+	</android.support.v4.widget.NestedScrollView>
+</LinearLayout>
